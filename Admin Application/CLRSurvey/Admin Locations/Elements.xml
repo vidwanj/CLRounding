@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Admin Locations" List="113" Url="_catalogs/wp">
+    <File Path="Admin Locations\Admin Locations.webpart" Url="Admin Locations.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="CLR" />
+    </File>
+  </Module>
+</Elements>

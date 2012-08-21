@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Study\CLRProject\RestExampe\Deploy" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="04/07/2012 19:06:02" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="04/07/2012 19:06:02" />
+    <file relUrl="CLRService.svc" publishTime="04/07/2012 19:44:28" />
+    <file relUrl="defualt.aspx" publishTime="04/07/2012 19:13:13" />
+    <file relUrl="Web.config" publishTime="05/31/2012 13:04:29" />
+    <file relUrl="bin/CLRRestService.pdb" publishTime="05/31/2012 12:53:31" />
+    <file relUrl="bin/CLRRestService.dll" publishTime="05/31/2012 12:53:31" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="04/07/2012 19:06:02" />
+  </publishProfile>
+</publishData>

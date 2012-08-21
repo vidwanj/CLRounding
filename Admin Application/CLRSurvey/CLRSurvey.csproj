@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{850A5806-1C69-4390-BB8C-30EEA84767C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLRSurvey</RootNamespace>
+    <AssemblyName>CLRSurvey</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <TokenReplacementFileExtensions>asmx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\Rule Sets\Sonora.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddQuestion\AddQuestion.cs" />
+    <Compile Include="AddQuestion\AddQuestionUserControl.ascx.cs">
+      <DependentUpon>AddQuestionUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddQuestion\AddQuestionUserControl.ascx.designer.cs">
+      <DependentUpon>AddQuestionUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddQuestion\keypress.cs" />
+    <Compile Include="Admin Departments\Admin Departments.cs" />
+    <Compile Include="Admin Departments\Admin DepartmentsUserControl.ascx.cs">
+      <DependentUpon>Admin DepartmentsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Departments\Admin DepartmentsUserControl.ascx.designer.cs">
+      <DependentUpon>Admin DepartmentsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Employees\Admin Employees.cs" />
+    <Compile Include="Admin Employees\Admin EmployeesUserControl.ascx.cs">
+      <DependentUpon>Admin EmployeesUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Employees\Admin EmployeesUserControl.ascx.designer.cs">
+      <DependentUpon>Admin EmployeesUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Locations\Admin Locations.cs" />
+    <Compile Include="Admin Locations\Admin LocationsUserControl.ascx.cs">
+      <DependentUpon>Admin LocationsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Locations\Admin LocationsUserControl.ascx.designer.cs">
+      <DependentUpon>Admin LocationsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin MaintainDept\Admin MaintainDept.cs" />
+    <Compile Include="Admin MaintainDept\Admin MaintainDeptUserControl.ascx.cs">
+      <DependentUpon>Admin MaintainDeptUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin MaintainDept\Admin MaintainDeptUserControl.ascx.designer.cs">
+      <DependentUpon>Admin MaintainDeptUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin MaintainEmployee\Admin MaintainEmployee.cs" />
+    <Compile Include="Admin MaintainEmployee\Admin MaintainEmployeeUserControl.ascx.cs">
+      <DependentUpon>Admin MaintainEmployeeUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin MaintainEmployee\Admin MaintainEmployeeUserControl.ascx.designer.cs">
+      <DependentUpon>Admin MaintainEmployeeUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin MaintainLocation\Admin MaintainLocation.cs" />
+    <Compile Include="Admin MaintainLocation\Admin MaintainLocationUserControl.ascx.cs">
+      <DependentUpon>Admin MaintainLocationUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin MaintainLocation\Admin MaintainLocationUserControl.ascx.designer.cs">
+      <DependentUpon>Admin MaintainLocationUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin MaintainRoom\Admin MaintainRoom.cs" />
+    <Compile Include="Admin MaintainRoom\Admin MaintainRoomUserControl.ascx.cs">
+      <DependentUpon>Admin MaintainRoomUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin MaintainRoom\Admin MaintainRoomUserControl.ascx.designer.cs">
+      <DependentUpon>Admin MaintainRoomUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Rooms\Admin Rooms.cs" />
+    <Compile Include="Admin Rooms\Admin RoomsUserControl.ascx.cs">
+      <DependentUpon>Admin RoomsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Rooms\Admin RoomsUserControl.ascx.designer.cs">
+      <DependentUpon>Admin RoomsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_DeptsEmps\Admin_DeptsEmps.cs" />
+    <Compile Include="Admin_DeptsEmps\Admin_DeptsEmpsUserControl.ascx.cs">
+      <DependentUpon>Admin_DeptsEmpsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_DeptsEmps\Admin_DeptsEmpsUserControl.ascx.designer.cs">
+      <DependentUpon>Admin_DeptsEmpsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_DeptsRooms\Admin_DeptsRooms.cs" />
+    <Compile Include="Admin_DeptsRooms\Admin_DeptsRoomsUserControl.ascx.cs">
+      <DependentUpon>Admin_DeptsRoomsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_DeptsRooms\Admin_DeptsRoomsUserControl.ascx.designer.cs">
+      <DependentUpon>Admin_DeptsRoomsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLRQuestnRespSummary\CLRQuestnRespSummary.cs" />
+    <Compile Include="CLRQuestnRespSummary\CLRQuestnRespSummaryUserControl.ascx.cs">
+      <DependentUpon>CLRQuestnRespSummaryUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLRQuestnRespSummary\CLRQuestnRespSummaryUserControl.ascx.designer.cs">
+      <DependentUpon>CLRQuestnRespSummaryUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClrResponseReport\ClrResponseReport.cs" />
+    <Compile Include="ClrResponseReport\ClrResponseReportUserControl.ascx.cs">
+      <DependentUpon>ClrResponseReportUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClrResponseReport\ClrResponseReportUserControl.ascx.designer.cs">
+      <DependentUpon>ClrResponseReportUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLRStatusSummary\CLRStatusSummary.cs" />
+    <Compile Include="CLRStatusSummary\CLRStatusSummaryUserControl.ascx.cs">
+      <DependentUpon>CLRStatusSummaryUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLRStatusSummary\CLRStatusSummaryUserControl.ascx.designer.cs">
+      <DependentUpon>CLRStatusSummaryUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLRSurveyTimerJob.cs" />
+    <Compile Include="CLR_SummaryReport\CLR_SummaryReport.cs" />
+    <Compile Include="CLR_SummaryReport\CLR_SummaryReportUserControl.ascx.cs">
+      <DependentUpon>CLR_SummaryReportUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLR_SummaryReport\CLR_SummaryReportUserControl.ascx.designer.cs">
+      <DependentUpon>CLR_SummaryReportUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeptQuestion\DeptQuestion.cs" />
+    <Compile Include="DeptQuestion\DeptQuestionUserControl.ascx.cs">
+      <DependentUpon>DeptQuestionUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeptQuestion\DeptQuestionUserControl.ascx.designer.cs">
+      <DependentUpon>DeptQuestionUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeptRooms\DeptRooms.cs" />
+    <Compile Include="DeptRooms\DeptRoomsUserControl.ascx.cs">
+      <DependentUpon>DeptRoomsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeptRooms\DeptRoomsUserControl.ascx.designer.cs">
+      <DependentUpon>DeptRoomsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDepartment\EmpDepartment.cs" />
+    <Compile Include="EmpDepartment\EmpDepartmentUserControl.ascx.cs">
+      <DependentUpon>EmpDepartmentUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpDepartment\EmpDepartmentUserControl.ascx.designer.cs">
+      <DependentUpon>EmpDepartmentUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CLRSurveyTimerJobFeature\CLRSurveyTimerJobFeature.EventReceiver.cs">
+      <DependentUpon>CLRSurveyTimerJobFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MaintainHome\MaintainHome.cs" />
+    <Compile Include="MaintainHome\MaintainHomeUserControl.ascx.cs">
+      <DependentUpon>MaintainHomeUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintainHome\MaintainHomeUserControl.ascx.designer.cs">
+      <DependentUpon>MaintainHomeUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionList\QuestionList.cs" />
+    <Compile Include="QuestionList\QuestionListUserControl.ascx.cs">
+      <DependentUpon>QuestionListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuestionList\QuestionListUserControl.ascx.designer.cs">
+      <DependentUpon>QuestionListUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QustnRespSummary\QustnRespSummary.cs" />
+    <Compile Include="QustnRespSummary\QustnRespSummaryUserControl.ascx.cs">
+      <DependentUpon>QustnRespSummaryUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QustnRespSummary\QustnRespSummaryUserControl.ascx.designer.cs">
+      <DependentUpon>QustnRespSummaryUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail\SendMail.cs" />
+    <Compile Include="SendMail\SendMailUserControl.ascx.cs">
+      <DependentUpon>SendMailUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendMail\SendMailUserControl.ascx.designer.cs">
+      <DependentUpon>SendMailUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddQuestion\AddQuestion.webpart" />
+    <None Include="AddQuestion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f372b7c8-906c-4310-9a78-b2e9003c76cb}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin Departments\Admin Departments.webpart" />
+    <None Include="Admin Departments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e434cb67-9dde-44c6-8e2a-7b5f6b1e3d25}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin Employees\Admin Employees.webpart" />
+    <None Include="Admin Employees\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d90d32ba-e11c-40b3-bf7f-dc0a1e65113c}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin Locations\Admin Locations.webpart" />
+    <None Include="Admin Locations\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6945bfe-81e9-44b1-8d65-5c395ef99455}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin MaintainDept\Admin MaintainDept.webpart" />
+    <None Include="Admin MaintainDept\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5dd33c25-d24e-42f2-8a55-f73bf045cff9}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin MaintainEmployee\Admin MaintainEmployee.webpart" />
+    <None Include="Admin MaintainEmployee\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e8de5d86-63ae-4392-b0f1-5329513cfa11}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin MaintainLocation\Admin MaintainLocation.webpart" />
+    <None Include="Admin MaintainLocation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eb7efa56-602c-449a-8e28-85388d946bb9}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin MaintainRoom\Admin MaintainRoom.webpart" />
+    <None Include="Admin MaintainRoom\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86bb4ad2-5cc8-4f16-b0c0-2ac5a179819a}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin Rooms\Admin Rooms.webpart" />
+    <None Include="Admin Rooms\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{90b44866-1563-453f-98e9-294c600f072e}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin_DeptsEmps\Admin_DeptsEmps.webpart" />
+    <None Include="Admin_DeptsEmps\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0fe99c26-6ad7-4f2e-af17-8825814fd577}</SharePointProjectItemId>
+    </None>
+    <None Include="Admin_DeptsRooms\Admin_DeptsRooms.webpart" />
+    <None Include="Admin_DeptsRooms\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fd9a7792-e063-44fa-8d68-b4133fb5beff}</SharePointProjectItemId>
+    </None>
+    <None Include="CLRQuestnRespSummary\CLRQuestnRespSummary.webpart" />
+    <None Include="CLRQuestnRespSummary\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{393d0631-9a93-4a1c-bbcf-908ef04e1ff7}</SharePointProjectItemId>
+    </None>
+    <None Include="ClrResponseReport\ClrResponseReport.webpart" />
+    <None Include="ClrResponseReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{006b9142-df98-46ab-8534-3fe66876f086}</SharePointProjectItemId>
+    </None>
+    <None Include="CLRStatusSummary\CLRStatusSummary.webpart" />
+    <None Include="CLRStatusSummary\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{78f42b99-c9d6-4f38-b5f2-07c90e7c9734}</SharePointProjectItemId>
+    </None>
+    <None Include="CLR_SummaryReport\CLR_SummaryReport.webpart" />
+    <None Include="CLR_SummaryReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d97cb6de-0575-47ca-97f6-68c1834eabc8}</SharePointProjectItemId>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0f090ae-94af-4ee6-8b7e-a3858a057a9f}</SharePointProjectItemId>
+    </None>
+    <None Include="DeptQuestion\DeptQuestion.webpart" />
+    <None Include="DeptQuestion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{00bf6c82-1339-49cd-ad4f-0858db152a44}</SharePointProjectItemId>
+    </None>
+    <None Include="DeptRooms\DeptRooms.webpart" />
+    <None Include="DeptRooms\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{805ac3cc-fd3e-409a-a987-6272f4880db9}</SharePointProjectItemId>
+    </None>
+    <None Include="EmpDepartment\EmpDepartment.webpart" />
+    <None Include="EmpDepartment\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{42690a2e-4716-4e5c-96fd-4ac221b965b0}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{03663945-07a9-4e40-b509-0ea18b603790}</FeatureId>
+    </None>
+    <None Include="Features\CLRSurveyTimerJobFeature\CLRSurveyTimerJobFeature.feature">
+      <FeatureId>{d39925a0-115d-4729-96f7-729204b1f451}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eca1e631-c0a5-400d-83e1-f4c99a2af641}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c26699d0-8c83-40bf-8c83-c9ab3580a149}</SharePointProjectItemId>
+    </None>
+    <None Include="MaintainHome\MaintainHome.webpart" />
+    <None Include="MaintainHome\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19b92e97-c230-4be7-a7e9-448177389eae}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ba15a523-5f8b-4c06-9b58-2c930e62c3e2}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="QuestionList\QuestionList.webpart" />
+    <None Include="QuestionList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2b37c860-9e3e-496f-89af-40f3ebbed884}</SharePointProjectItemId>
+    </None>
+    <None Include="QustnRespSummary\QustnRespSummary.webpart" />
+    <None Include="QustnRespSummary\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6f27de60-2d9a-4f62-b7a2-f7b0df9e9e1e}</SharePointProjectItemId>
+    </None>
+    <None Include="SendMail\SendMail.webpart" />
+    <None Include="SendMail\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e68f1851-a164-4464-aa7a-aa7c8ac2064e}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AddQuestion\AddQuestionUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="AddQuestion\Elements.xml" />
+    <Content Include="Admin Departments\Admin DepartmentsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin Departments\Elements.xml" />
+    <Content Include="Admin Employees\Admin EmployeesUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin Employees\Elements.xml" />
+    <Content Include="Admin Locations\Admin LocationsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin Locations\Elements.xml" />
+    <Content Include="Admin MaintainDept\Admin MaintainDeptUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin MaintainDept\Elements.xml" />
+    <Content Include="Admin MaintainEmployee\Admin MaintainEmployeeUserControl.ascx" />
+    <Content Include="Admin MaintainEmployee\Elements.xml" />
+    <Content Include="Admin MaintainLocation\Admin MaintainLocationUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin MaintainLocation\Elements.xml" />
+    <Content Include="Admin MaintainRoom\Admin MaintainRoomUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin MaintainRoom\Elements.xml" />
+    <Content Include="Admin Rooms\Admin RoomsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin Rooms\Elements.xml" />
+    <Content Include="Admin_DeptsEmps\Admin_DeptsEmpsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin_DeptsEmps\Elements.xml" />
+    <Content Include="Admin_DeptsRooms\Admin_DeptsRoomsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Admin_DeptsRooms\Elements.xml" />
+    <Content Include="CLRQuestnRespSummary\CLRQuestnRespSummaryUserControl.ascx" />
+    <Content Include="CLRQuestnRespSummary\Elements.xml" />
+    <Content Include="ClrResponseReport\ClrResponseReportUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ClrResponseReport\Elements.xml" />
+    <Content Include="CLRStatusSummary\CLRStatusSummaryUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CLRStatusSummary\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CLR_SummaryReport\CLR_SummaryReportUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CLR_SummaryReport\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Visifier\SL.Visifire.Charts.xap" />
+    <Content Include="CONTROLTEMPLATES\Visifier\SL.Visifire.Gauges.xap" />
+    <Content Include="CONTROLTEMPLATES\Visifier\Visifire.js" />
+    <Content Include="CONTROLTEMPLATES\Visifier\Visifire2.js" />
+    <Content Include="DeptQuestion\DeptQuestionUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DeptQuestion\Elements.xml" />
+    <Content Include="DeptRooms\DeptRoomsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DeptRooms\Elements.xml" />
+    <Content Include="EmpDepartment\Elements.xml" />
+    <Content Include="EmpDepartment\EmpDepartmentUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CLRSurveyTimerJobFeature\CLRSurveyTimerJobFeature.Template.xml">
+      <DependentUpon>CLRSurveyTimerJobFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\CLRSurvey\all-left.png" />
+    <Content Include="Images\CLRSurvey\all-right.png" />
+    <Content Include="Images\CLRSurvey\btn_primary.gif" />
+    <Content Include="Images\CLRSurvey\btn_secondary.gif" />
+    <Content Include="Images\CLRSurvey\cancel.png" />
+    <Content Include="Images\CLRSurvey\clear.png" />
+    <Content Include="Images\CLRSurvey\department.png" />
+    <Content Include="Images\CLRSurvey\dept-employees.png" />
+    <Content Include="Images\CLRSurvey\dept-questions.png" />
+    <Content Include="Images\CLRSurvey\dept-rooms.png" />
+    <Content Include="Images\CLRSurvey\get-report.png" />
+    <Content Include="Images\CLRSurvey\left.png" />
+    <Content Include="Images\CLRSurvey\right.png" />
+    <Content Include="Images\CLRSurvey\save.png" />
+    <Content Include="Images\CLRSurvey\sortdown-m.gif" />
+    <Content Include="Images\CLRSurvey\sortup-m.gif" />
+    <Content Include="Images\CLRSurvey\submit.png" />
+    <Content Include="Images\CLRSurvey\table-header-bg.png" />
+    <Content Include="Layouts\CLRSurvey\ChartService.asmx" />
+    <Content Include="Layouts\CLRSurvey\DatePickerStyles.css" />
+    <Content Include="Layouts\CLRSurvey\jquery-1.3.2.min.js" />
+    <Content Include="Layouts\CLRSurvey\jquery-1.4.1.js" />
+    <Content Include="Layouts\CLRSurvey\jquery-1.4.1.min.js" />
+    <Content Include="Layouts\CLRSurvey\jquery-1.7.1.min.js" />
+    <Content Include="Layouts\CLRSurvey\jquery-ui-1.8.2.custom.css" />
+    <Content Include="Layouts\CLRSurvey\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="Layouts\CLRSurvey\jquery.json-1.3.min.js" />
+    <Content Include="Layouts\CLRSurvey\jquery.json-2.3.js" />
+    <Content Include="Layouts\CLRSurvey\main.css" />
+    <Content Include="MaintainHome\Elements.xml" />
+    <Content Include="MaintainHome\MaintainHomeUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="QuestionList\Elements.xml" />
+    <Content Include="QuestionList\QuestionListUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="QustnRespSummary\Elements.xml" />
+    <Content Include="QustnRespSummary\QustnRespSummaryUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SendMail\Elements.xml" />
+    <Content Include="SendMail\SendMailUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="Admin_DeptsEmpsUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Admin_DeptsEmps\" Type="ElementManifest" />
+    <ProjectItemFile Source="Admin_DeptsEmps.webpart" Target="Admin_DeptsEmps\" Type="ElementFile" />
+    <ProjectItemFile Source="Admin_DeptsEmpsUserControl.ascx" Target="CONTROLTEMPLATES\CLRSurvey\Admin_DeptsEmps\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CLRSurvey.Admin_DeptsEmps" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

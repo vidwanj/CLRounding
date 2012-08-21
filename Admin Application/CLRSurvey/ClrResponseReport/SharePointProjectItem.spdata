@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="ClrResponseReportUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ClrResponseReport\" Type="ElementManifest" />
+    <ProjectItemFile Source="ClrResponseReport.webpart" Target="ClrResponseReport\" Type="ElementFile" />
+    <ProjectItemFile Source="ClrResponseReportUserControl.ascx" Target="CONTROLTEMPLATES\CLRSurvey\ClrResponseReport\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CLRSurvey.ClrResponseReport" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+.input-box {
+	border: 1px solid #BFC2C4;
+	padding: 4px 5px;
+}
+
+.drop-down {
+	border: 1px solid #BFC2C4;
+	padding: 4px 5px;
+}
+.form-header
+{
+	background-color: #0398b0;
+	font-size:14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+}
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Verdana;
+	font-size:12px;
+	color:#1d1d1e;
+}
+.table-border
+{
+	border: 1px solid #CCCCCC;
+	margin: 10px 0;
+}
+.bottom-border
+{
+	border-bottom: 1px solid  #efecec;
+}
+.label-bg {
+	border-collapse: collapse;
+	padding: 5px 10px 5px 10px;
+	background-color: #e5fbfd;
+	border-bottom: 1px solid #FFF;
+	font-size:13px;
+	font-weight:bold;
+	color: #001e54;
+}
+.text-field-bg {
+	border-collapse: collapse;
+	padding: 5px 10px 5px 5px;
+	border-bottom: 1px solid #efecec;
+	background-color: #fcfcfc;
+}
+input[type="text"], select, textarea {
+	border: 1px solid #CCCCCC;
+	padding: 2px;
+	border-radius: 1px 1px 1px 1px;
+	color: #666666;
+	outline: medium none;
+	margin: 2px;
+	font-size: 13px;
+	font-family:Verdana;
+}
+.required
+{
+	color: #F00;	
+}
+.btn_primary, .btn_secondary {
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 1px 2px #DDDDDD;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 0 9px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	white-space: nowrap;
+	margin: 5px;
+}
+.btn_secondary {
+	background: url("../images/btn_secondary.gif") repeat scroll center top transparent;
+	border: 1px solid #BDBDBD;
+	color: #333333;
+	text-decoration: none !important;
+}
+.btn_primary {
+	background: url("../images/btn_primary.gif") repeat scroll center top #6FAB0B;
+	border: 1px solid #6CB100;
+	color: #FFFFFF;
+}
+.info
+{
+	font-size: 11px;
+}.form-sub-header {
+	background-color: #0096db;
+	font-size:14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+}
+.sub-label-bg {
+	border-collapse: collapse;
+	padding: 5px 10px 5px 10px;
+	background-color: #edf3f9;
+	border-bottom: 1px solid #FFF;
+	font-size:13px;
+	font-weight:bold;
+	color: #001e54;
+}
+.main-sub-title-bg {
+	border-collapse: collapse;
+	padding: 5px 10px 5px 10px;
+	background-color: #68ace5;
+	border-bottom: 1px solid #FFF;
+	font-size:13px;
+	font-weight:bold;
+	color: #FFFFFF;
+	text-align: center;
+}
+.sub-title {
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	padding: 7px;
+}

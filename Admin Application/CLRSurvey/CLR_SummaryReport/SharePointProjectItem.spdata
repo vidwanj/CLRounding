@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="CLR_SummaryReportUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="CLR_SummaryReport\" Type="ElementManifest" />
+    <ProjectItemFile Source="CLR_SummaryReport.webpart" Target="CLR_SummaryReport\" Type="ElementFile" />
+    <ProjectItemFile Source="CLR_SummaryReportUserControl.ascx" Target="CONTROLTEMPLATES\CLRSurvey\CLR_SummaryReport\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CLRSurvey.CLR_SummaryReport" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

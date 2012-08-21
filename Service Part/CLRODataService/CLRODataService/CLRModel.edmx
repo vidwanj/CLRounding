@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CLR_DevlModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CLR_DevlModelStoreContainer">
+          <EntitySet Name="CLR" EntityType="CLR_DevlModel.Store.CLR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLRType" EntityType="CLR_DevlModel.Store.CLRType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLRTypeQuestn" EntityType="CLR_DevlModel.Store.CLRTypeQuestn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Dept" EntityType="CLR_DevlModel.Store.Dept" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeptContact" EntityType="CLR_DevlModel.Store.DeptContact" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="CLR_DevlModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeDept" EntityType="CLR_DevlModel.Store.EmployeeDept" store:Type="Tables" store:Schema="dbo" store:Name="EmployeeDept">
+            <DefiningQuery>SELECT 
+      [EmployeeDept].[DeptID] AS [DeptID], 
+      [EmployeeDept].[EmployeeID] AS [EmployeeID]
+      FROM [dbo].[EmployeeDept] AS [EmployeeDept]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Entity" EntityType="CLR_DevlModel.Store.Entity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locatn" EntityType="CLR_DevlModel.Store.Locatn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Questn" EntityType="CLR_DevlModel.Store.Questn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuestnDept" EntityType="CLR_DevlModel.Store.QuestnDept" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuestnRespns" EntityType="CLR_DevlModel.Store.QuestnRespns" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Room" EntityType="CLR_DevlModel.Store.Room" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SvcLine" EntityType="CLR_DevlModel.Store.SvcLine" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ticket" EntityType="CLR_DevlModel.Store.Ticket" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TicketActn" EntityType="CLR_DevlModel.Store.TicketActn" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__CLR__CLRTypeID__3E52440B" Association="CLR_DevlModel.Store.FK__CLR__CLRTypeID__3E52440B">
+            <End Role="CLRType" EntitySet="CLRType" />
+            <End Role="CLR" EntitySet="CLR" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLR__RoomID__3F466844" Association="CLR_DevlModel.Store.FK__CLR__RoomID__3F466844">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="CLR" EntitySet="CLR" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLRTypeQu__CLRTy__412EB0B6" Association="CLR_DevlModel.Store.FK__CLRTypeQu__CLRTy__412EB0B6">
+            <End Role="CLRType" EntitySet="CLRType" />
+            <End Role="CLRTypeQuestn" EntitySet="CLRTypeQuestn" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLRTypeQu__Quest__403A8C7D" Association="CLR_DevlModel.Store.FK__CLRTypeQu__Quest__403A8C7D">
+            <End Role="Questn" EntitySet="Questn" />
+            <End Role="CLRTypeQuestn" EntitySet="CLRTypeQuestn" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dept__LocatnID__4316F928" Association="CLR_DevlModel.Store.FK__Dept__LocatnID__4316F928">
+            <End Role="Locatn" EntitySet="Locatn" />
+            <End Role="Dept" EntitySet="Dept" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dept__SvcLineID__4222D4EF" Association="CLR_DevlModel.Store.FK__Dept__SvcLineID__4222D4EF">
+            <End Role="SvcLine" EntitySet="SvcLine" />
+            <End Role="Dept" EntitySet="Dept" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeptConta__DeptI__440B1D61" Association="CLR_DevlModel.Store.FK__DeptConta__DeptI__440B1D61">
+            <End Role="Dept" EntitySet="Dept" />
+            <End Role="DeptContact" EntitySet="DeptContact" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Locatn__EntityID__44FF419A" Association="CLR_DevlModel.Store.FK__Locatn__EntityID__44FF419A">
+            <End Role="Entity" EntitySet="Entity" />
+            <End Role="Locatn" EntitySet="Locatn" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnDep__DeptI__45F365D3" Association="CLR_DevlModel.Store.FK__QuestnDep__DeptI__45F365D3">
+            <End Role="Dept" EntitySet="Dept" />
+            <End Role="QuestnDept" EntitySet="QuestnDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnDep__Quest__46E78A0C" Association="CLR_DevlModel.Store.FK__QuestnDep__Quest__46E78A0C">
+            <End Role="Questn" EntitySet="Questn" />
+            <End Role="QuestnDept" EntitySet="QuestnDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnRes__ClR_I__48CFD27E" Association="CLR_DevlModel.Store.FK__QuestnRes__ClR_I__48CFD27E">
+            <End Role="CLR" EntitySet="CLR" />
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnRes__Quest__47DBAE45" Association="CLR_DevlModel.Store.FK__QuestnRes__Quest__47DBAE45">
+            <End Role="Questn" EntitySet="Questn" />
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Room__DeptID__49C3F6B7" Association="CLR_DevlModel.Store.FK__Room__DeptID__49C3F6B7">
+            <End Role="Dept" EntitySet="Dept" />
+            <End Role="Room" EntitySet="Room" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ticket__DeptID__4AB81AF0" Association="CLR_DevlModel.Store.FK__Ticket__DeptID__4AB81AF0">
+            <End Role="Dept" EntitySet="Dept" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ticket__QuestnRe__4BAC3F29" Association="CLR_DevlModel.Store.FK__Ticket__QuestnRe__4BAC3F29">
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicketAct__Ticke__4CA06362" Association="CLR_DevlModel.Store.FK__TicketAct__Ticke__4CA06362">
+            <End Role="Ticket" EntitySet="Ticket" />
+            <End Role="TicketActn" EntitySet="TicketActn" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CLR">
+          <Key>
+            <PropertyRef Name="ClR_ID" />
+          </Key>
+          <Property Name="ClR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLRDateTime" Type="datetime" />
+          <Property Name="CLRStatusCode" Type="varchar" MaxLength="5" />
+          <Property Name="CLRTypeID" Type="int" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="EnteredByID" Type="char" MaxLength="18" />
+          <Property Name="MRN_EncntrDescr" Type="varchar" MaxLength="20" />
+          <Property Name="RoomID" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="CLRType">
+          <Key>
+            <PropertyRef Name="CLRTypeID" />
+          </Key>
+          <Property Name="CLRTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLRTypeAbbrvtnName" Type="varchar" MaxLength="10" />
+          <Property Name="CLRTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="DefltSortOrdr" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="CLRTypeQuestn">
+          <Key>
+            <PropertyRef Name="CLRTypeID" />
+            <PropertyRef Name="QuestnID" />
+          </Key>
+          <Property Name="CLRTypeID" Type="int" Nullable="false" />
+          <Property Name="QuestnID" Type="int" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Dept">
+          <Key>
+            <PropertyRef Name="DeptID" />
+          </Key>
+          <Property Name="DeptID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="DeptAbbrvtnName" Type="varchar" MaxLength="50" />
+          <Property Name="LocatnID" Type="varchar" MaxLength="10" />
+          <Property Name="SvcLineID" Type="int" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="DefltSortOrdr" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="DeptContact">
+          <Key>
+            <PropertyRef Name="DeptContactID" />
+          </Key>
+          <Property Name="DeptContactID" Type="int" Nullable="false" />
+          <Property Name="DeptContactTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="DeptID" Type="varchar" MaxLength="10" />
+          <Property Name="EmpleID" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+          <Property Name="RoleName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CLR_Devl.dbo.EmployeeDept' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="EmployeeDept">
+          <Key>
+            <PropertyRef Name="DeptID" />
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="DeptID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="EmployeeID" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="EntityID" />
+          </Key>
+          <Property Name="EntityID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="EntityAbbrvtnName" Type="varchar" MaxLength="20" />
+          <Property Name="EntityName" Type="varchar" MaxLength="50" />
+          <Property Name="CLRContactID" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Locatn">
+          <Key>
+            <PropertyRef Name="LocatnID" />
+          </Key>
+          <Property Name="LocatnID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="EntityID" Type="varchar" MaxLength="10" />
+          <Property Name="LocatnAbbrvtnName" Type="varchar" MaxLength="20" />
+          <Property Name="LocatnName" Type="varchar" MaxLength="50" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="DefltSortOrdr" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Questn">
+          <Key>
+            <PropertyRef Name="QuestnID" />
+          </Key>
+          <Property Name="QuestnID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="QuestnText" Type="varchar" MaxLength="120" />
+          <Property Name="QuestnShortText" Type="varchar" MaxLength="50" />
+          <Property Name="TicketTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="RespnsTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="QuestnDept">
+          <Key>
+            <PropertyRef Name="QuestnDeptID" />
+          </Key>
+          <Property Name="QuestnDeptID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DeptID" Type="varchar" MaxLength="10" />
+          <Property Name="EffctvDate" Type="datetime" />
+          <Property Name="ExpirdDate" Type="datetime" />
+          <Property Name="QuestnID" Type="int" />
+          <Property Name="UdpateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="QuestnRespns">
+          <Key>
+            <PropertyRef Name="QuestnRespnsID" />
+          </Key>
+          <Property Name="QuestnRespnsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClR_ID" Type="int" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="EnteredByID" Type="varchar" MaxLength="20" />
+          <Property Name="QuestnStatusCode" Type="varchar" MaxLength="5" />
+          <Property Name="RespnsDateTime" Type="datetime" />
+          <Property Name="RespnsText" Type="varchar" MaxLength="2000" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+          <Property Name="QuestnID" Type="int" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="varchar" MaxLength="500" />
+          <Property Name="DeptID" Type="varchar" MaxLength="10" />
+          <Property Name="RoomDescr" Type="varchar" MaxLength="50" />
+          <Property Name="RoomTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="SvcLine">
+          <Key>
+            <PropertyRef Name="SvcLineID" />
+          </Key>
+          <Property Name="SvcLineID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SvcLineAbbrvtnName" Type="varchar" MaxLength="20" />
+          <Property Name="SvcLineName" Type="varchar" MaxLength="50" />
+          <Property Name="ActvInactvInd" Type="char" MaxLength="1" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="DeptID" Type="varchar" MaxLength="10" />
+          <Property Name="EnteredByID" Type="varchar" MaxLength="20" />
+          <Property Name="IssueText" Type="varchar" MaxLength="2000" />
+          <Property Name="ResltnText" Type="varchar" MaxLength="2000" />
+          <Property Name="ReslvdByID" Type="varchar" MaxLength="20" />
+          <Property Name="QuestnRespnsID" Type="int" />
+          <Property Name="TicketDateTime" Type="datetime" />
+          <Property Name="TicketPriorityCode" Type="varchar" MaxLength="5" />
+          <Property Name="TicketStatusCode" Type="varchar" MaxLength="5" />
+          <Property Name="TicketTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="UdpateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="TicketActn">
+          <Key>
+            <PropertyRef Name="TicketActnID" />
+          </Key>
+          <Property Name="TicketActnID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="varchar" MaxLength="2000" />
+          <Property Name="DocmntFileName" Type="varchar" MaxLength="120" />
+          <Property Name="EnteredByID" Type="varchar" MaxLength="20" />
+          <Property Name="TicketActnDateTime" Type="datetime" />
+          <Property Name="TicketActnStatusCode" Type="varchar" MaxLength="5" />
+          <Property Name="TicketActnTypeCode" Type="varchar" MaxLength="5" />
+          <Property Name="TicketID" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateOpertr" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <Association Name="FK__CLR__CLRTypeID__3E52440B">
+          <End Role="CLRType" Type="CLR_DevlModel.Store.CLRType" Multiplicity="0..1" />
+          <End Role="CLR" Type="CLR_DevlModel.Store.CLR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLRType">
+              <PropertyRef Name="CLRTypeID" />
+            </Principal>
+            <Dependent Role="CLR">
+              <PropertyRef Name="CLRTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLR__RoomID__3F466844">
+          <End Role="Room" Type="CLR_DevlModel.Store.Room" Multiplicity="0..1" />
+          <End Role="CLR" Type="CLR_DevlModel.Store.CLR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="RoomID" />
+            </Principal>
+            <Dependent Role="CLR">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLRTypeQu__CLRTy__412EB0B6">
+          <End Role="CLRType" Type="CLR_DevlModel.Store.CLRType" Multiplicity="1" />
+          <End Role="CLRTypeQuestn" Type="CLR_DevlModel.Store.CLRTypeQuestn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLRType">
+              <PropertyRef Name="CLRTypeID" />
+            </Principal>
+            <Dependent Role="CLRTypeQuestn">
+              <PropertyRef Name="CLRTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLRTypeQu__Quest__403A8C7D">
+          <End Role="Questn" Type="CLR_DevlModel.Store.Questn" Multiplicity="1" />
+          <End Role="CLRTypeQuestn" Type="CLR_DevlModel.Store.CLRTypeQuestn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="CLRTypeQuestn">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dept__LocatnID__4316F928">
+          <End Role="Locatn" Type="CLR_DevlModel.Store.Locatn" Multiplicity="0..1" />
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locatn">
+              <PropertyRef Name="LocatnID" />
+            </Principal>
+            <Dependent Role="Dept">
+              <PropertyRef Name="LocatnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dept__SvcLineID__4222D4EF">
+          <End Role="SvcLine" Type="CLR_DevlModel.Store.SvcLine" Multiplicity="0..1" />
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SvcLine">
+              <PropertyRef Name="SvcLineID" />
+            </Principal>
+            <Dependent Role="Dept">
+              <PropertyRef Name="SvcLineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeptConta__DeptI__440B1D61">
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="0..1" />
+          <End Role="DeptContact" Type="CLR_DevlModel.Store.DeptContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="DeptContact">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Locatn__EntityID__44FF419A">
+          <End Role="Entity" Type="CLR_DevlModel.Store.Entity" Multiplicity="0..1" />
+          <End Role="Locatn" Type="CLR_DevlModel.Store.Locatn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entity">
+              <PropertyRef Name="EntityID" />
+            </Principal>
+            <Dependent Role="Locatn">
+              <PropertyRef Name="EntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnDep__DeptI__45F365D3">
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="0..1" />
+          <End Role="QuestnDept" Type="CLR_DevlModel.Store.QuestnDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="QuestnDept">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnDep__Quest__46E78A0C">
+          <End Role="Questn" Type="CLR_DevlModel.Store.Questn" Multiplicity="0..1" />
+          <End Role="QuestnDept" Type="CLR_DevlModel.Store.QuestnDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="QuestnDept">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnRes__ClR_I__48CFD27E">
+          <End Role="CLR" Type="CLR_DevlModel.Store.CLR" Multiplicity="0..1" />
+          <End Role="QuestnRespns" Type="CLR_DevlModel.Store.QuestnRespns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLR">
+              <PropertyRef Name="ClR_ID" />
+            </Principal>
+            <Dependent Role="QuestnRespns">
+              <PropertyRef Name="ClR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnRes__Quest__47DBAE45">
+          <End Role="Questn" Type="CLR_DevlModel.Store.Questn" Multiplicity="0..1" />
+          <End Role="QuestnRespns" Type="CLR_DevlModel.Store.QuestnRespns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="QuestnRespns">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Room__DeptID__49C3F6B7">
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="0..1" />
+          <End Role="Room" Type="CLR_DevlModel.Store.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ticket__DeptID__4AB81AF0">
+          <End Role="Dept" Type="CLR_DevlModel.Store.Dept" Multiplicity="0..1" />
+          <End Role="Ticket" Type="CLR_DevlModel.Store.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ticket__QuestnRe__4BAC3F29">
+          <End Role="QuestnRespns" Type="CLR_DevlModel.Store.QuestnRespns" Multiplicity="0..1" />
+          <End Role="Ticket" Type="CLR_DevlModel.Store.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuestnRespns">
+              <PropertyRef Name="QuestnRespnsID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="QuestnRespnsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicketAct__Ticke__4CA06362">
+          <End Role="Ticket" Type="CLR_DevlModel.Store.Ticket" Multiplicity="0..1" />
+          <End Role="TicketActn" Type="CLR_DevlModel.Store.TicketActn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="TicketID" />
+            </Principal>
+            <Dependent Role="TicketActn">
+              <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_AuthenticateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmpleID" Type="varchar" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CLR_DevlModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CLREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLRs" EntityType="CLR_DevlModel.CLR" />
+          <EntitySet Name="CLRTypes" EntityType="CLR_DevlModel.CLRType" />
+          <EntitySet Name="CLRTypeQuestns" EntityType="CLR_DevlModel.CLRTypeQuestn" />
+          <EntitySet Name="Depts" EntityType="CLR_DevlModel.Dept" />
+          <EntitySet Name="DeptContacts" EntityType="CLR_DevlModel.DeptContact" />
+          <EntitySet Name="Employees" EntityType="CLR_DevlModel.Employee" />
+          <EntitySet Name="EmployeeDepts" EntityType="CLR_DevlModel.EmployeeDept" />
+          <EntitySet Name="Entities" EntityType="CLR_DevlModel.Entity" />
+          <EntitySet Name="Locatns" EntityType="CLR_DevlModel.Locatn" />
+          <EntitySet Name="Questns" EntityType="CLR_DevlModel.Questn" />
+          <EntitySet Name="QuestnDepts" EntityType="CLR_DevlModel.QuestnDept" />
+          <EntitySet Name="QuestnRespns" EntityType="CLR_DevlModel.QuestnRespn" />
+          <EntitySet Name="Rooms" EntityType="CLR_DevlModel.Room" />
+          <EntitySet Name="SvcLines" EntityType="CLR_DevlModel.SvcLine" />
+          <EntitySet Name="Tickets" EntityType="CLR_DevlModel.Ticket" />
+          <EntitySet Name="TicketActns" EntityType="CLR_DevlModel.TicketActn" />
+          <AssociationSet Name="FK__CLR__CLRTypeID__3E52440B" Association="CLR_DevlModel.FK__CLR__CLRTypeID__3E52440B">
+            <End Role="CLRType" EntitySet="CLRTypes" />
+            <End Role="CLR" EntitySet="CLRs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLR__RoomID__3F466844" Association="CLR_DevlModel.FK__CLR__RoomID__3F466844">
+            <End Role="Room" EntitySet="Rooms" />
+            <End Role="CLR" EntitySet="CLRs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnRes__ClR_I__48CFD27E" Association="CLR_DevlModel.FK__QuestnRes__ClR_I__48CFD27E">
+            <End Role="CLR" EntitySet="CLRs" />
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLRTypeQu__CLRTy__412EB0B6" Association="CLR_DevlModel.FK__CLRTypeQu__CLRTy__412EB0B6">
+            <End Role="CLRType" EntitySet="CLRTypes" />
+            <End Role="CLRTypeQuestn" EntitySet="CLRTypeQuestns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLRTypeQu__Quest__403A8C7D" Association="CLR_DevlModel.FK__CLRTypeQu__Quest__403A8C7D">
+            <End Role="Questn" EntitySet="Questns" />
+            <End Role="CLRTypeQuestn" EntitySet="CLRTypeQuestns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dept__LocatnID__4316F928" Association="CLR_DevlModel.FK__Dept__LocatnID__4316F928">
+            <End Role="Locatn" EntitySet="Locatns" />
+            <End Role="Dept" EntitySet="Depts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dept__SvcLineID__4222D4EF" Association="CLR_DevlModel.FK__Dept__SvcLineID__4222D4EF">
+            <End Role="SvcLine" EntitySet="SvcLines" />
+            <End Role="Dept" EntitySet="Depts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeptConta__DeptI__440B1D61" Association="CLR_DevlModel.FK__DeptConta__DeptI__440B1D61">
+            <End Role="Dept" EntitySet="Depts" />
+            <End Role="DeptContact" EntitySet="DeptContacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnDep__DeptI__45F365D3" Association="CLR_DevlModel.FK__QuestnDep__DeptI__45F365D3">
+            <End Role="Dept" EntitySet="Depts" />
+            <End Role="QuestnDept" EntitySet="QuestnDepts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Room__DeptID__49C3F6B7" Association="CLR_DevlModel.FK__Room__DeptID__49C3F6B7">
+            <End Role="Dept" EntitySet="Depts" />
+            <End Role="Room" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ticket__DeptID__4AB81AF0" Association="CLR_DevlModel.FK__Ticket__DeptID__4AB81AF0">
+            <End Role="Dept" EntitySet="Depts" />
+            <End Role="Ticket" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Locatn__EntityID__44FF419A" Association="CLR_DevlModel.FK__Locatn__EntityID__44FF419A">
+            <End Role="Entity" EntitySet="Entities" />
+            <End Role="Locatn" EntitySet="Locatns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnDep__Quest__46E78A0C" Association="CLR_DevlModel.FK__QuestnDep__Quest__46E78A0C">
+            <End Role="Questn" EntitySet="Questns" />
+            <End Role="QuestnDept" EntitySet="QuestnDepts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QuestnRes__Quest__47DBAE45" Association="CLR_DevlModel.FK__QuestnRes__Quest__47DBAE45">
+            <End Role="Questn" EntitySet="Questns" />
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ticket__QuestnRe__4BAC3F29" Association="CLR_DevlModel.FK__Ticket__QuestnRe__4BAC3F29">
+            <End Role="QuestnRespns" EntitySet="QuestnRespns" />
+            <End Role="Ticket" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicketAct__Ticke__4CA06362" Association="CLR_DevlModel.FK__TicketAct__Ticke__4CA06362">
+            <End Role="Ticket" EntitySet="Tickets" />
+            <End Role="TicketActn" EntitySet="TicketActns" />
+          </AssociationSet>
+          <FunctionImport Name="AtuhenticateUser" EntitySet="Employees" ReturnType="Collection(CLR_DevlModel.Employee)">
+            <Parameter Name="EmpleID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UserAuthentication" EntitySet="DeptContacts" ReturnType="Collection(CLR_DevlModel.DeptContact)">
+            <Parameter Name="EmpleID" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="CLR">
+          <Key>
+            <PropertyRef Name="ClR_ID" />
+          </Key>
+          <Property Name="ClR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLRDateTime" Type="DateTime" />
+          <Property Name="CLRStatusCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="CLRTypeID" Type="Int32" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="EnteredByID" Type="String" MaxLength="18" Unicode="false" FixedLength="true" />
+          <Property Name="MRN_EncntrDescr" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CLRType" Relationship="CLR_DevlModel.FK__CLR__CLRTypeID__3E52440B" FromRole="CLR" ToRole="CLRType" />
+          <NavigationProperty Name="Room" Relationship="CLR_DevlModel.FK__CLR__RoomID__3F466844" FromRole="CLR" ToRole="Room" />
+          <NavigationProperty Name="QuestnRespns" Relationship="CLR_DevlModel.FK__QuestnRes__ClR_I__48CFD27E" FromRole="CLR" ToRole="QuestnRespns" />
+        </EntityType>
+        <EntityType Name="CLRType">
+          <Key>
+            <PropertyRef Name="CLRTypeID" />
+          </Key>
+          <Property Name="CLRTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLRTypeAbbrvtnName" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CLRTypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="DefltSortOrdr" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CLRs" Relationship="CLR_DevlModel.FK__CLR__CLRTypeID__3E52440B" FromRole="CLRType" ToRole="CLR" />
+          <NavigationProperty Name="CLRTypeQuestns" Relationship="CLR_DevlModel.FK__CLRTypeQu__CLRTy__412EB0B6" FromRole="CLRType" ToRole="CLRTypeQuestn" />
+        </EntityType>
+        <EntityType Name="CLRTypeQuestn">
+          <Key>
+            <PropertyRef Name="CLRTypeID" />
+            <PropertyRef Name="QuestnID" />
+          </Key>
+          <Property Name="CLRTypeID" Type="Int32" Nullable="false" />
+          <Property Name="QuestnID" Type="Int32" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CLRType" Relationship="CLR_DevlModel.FK__CLRTypeQu__CLRTy__412EB0B6" FromRole="CLRTypeQuestn" ToRole="CLRType" />
+          <NavigationProperty Name="Questn" Relationship="CLR_DevlModel.FK__CLRTypeQu__Quest__403A8C7D" FromRole="CLRTypeQuestn" ToRole="Questn" />
+        </EntityType>
+        <EntityType Name="Dept">
+          <Key>
+            <PropertyRef Name="DeptID" />
+          </Key>
+          <Property Name="DeptID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="DeptAbbrvtnName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LocatnID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SvcLineID" Type="Int32" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="DefltSortOrdr" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Locatn" Relationship="CLR_DevlModel.FK__Dept__LocatnID__4316F928" FromRole="Dept" ToRole="Locatn" />
+          <NavigationProperty Name="SvcLine" Relationship="CLR_DevlModel.FK__Dept__SvcLineID__4222D4EF" FromRole="Dept" ToRole="SvcLine" />
+          <NavigationProperty Name="DeptContacts" Relationship="CLR_DevlModel.FK__DeptConta__DeptI__440B1D61" FromRole="Dept" ToRole="DeptContact" />
+          <NavigationProperty Name="QuestnDepts" Relationship="CLR_DevlModel.FK__QuestnDep__DeptI__45F365D3" FromRole="Dept" ToRole="QuestnDept" />
+          <NavigationProperty Name="Rooms" Relationship="CLR_DevlModel.FK__Room__DeptID__49C3F6B7" FromRole="Dept" ToRole="Room" />
+          <NavigationProperty Name="Tickets" Relationship="CLR_DevlModel.FK__Ticket__DeptID__4AB81AF0" FromRole="Dept" ToRole="Ticket" />
+        </EntityType>
+        <EntityType Name="DeptContact">
+          <Key>
+            <PropertyRef Name="DeptContactID" />
+          </Key>
+          <Property Name="DeptContactID" Type="Int32" Nullable="false" />
+          <Property Name="DeptContactTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="DeptID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EmpleID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Dept" Relationship="CLR_DevlModel.FK__DeptConta__DeptI__440B1D61" FromRole="DeptContact" ToRole="Dept" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="RoleName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EmployeeDept">
+          <Key>
+            <PropertyRef Name="DeptID" />
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="DeptID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeID" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Entity">
+          <Key>
+            <PropertyRef Name="EntityID" />
+          </Key>
+          <Property Name="EntityID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EntityAbbrvtnName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EntityName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CLRContactID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Locatns" Relationship="CLR_DevlModel.FK__Locatn__EntityID__44FF419A" FromRole="Entity" ToRole="Locatn" />
+        </EntityType>
+        <EntityType Name="Locatn">
+          <Key>
+            <PropertyRef Name="LocatnID" />
+          </Key>
+          <Property Name="LocatnID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EntityID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LocatnAbbrvtnName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LocatnName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="DefltSortOrdr" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Depts" Relationship="CLR_DevlModel.FK__Dept__LocatnID__4316F928" FromRole="Locatn" ToRole="Dept" />
+          <NavigationProperty Name="Entity" Relationship="CLR_DevlModel.FK__Locatn__EntityID__44FF419A" FromRole="Locatn" ToRole="Entity" />
+        </EntityType>
+        <EntityType Name="Questn">
+          <Key>
+            <PropertyRef Name="QuestnID" />
+          </Key>
+          <Property Name="QuestnID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="QuestnText" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="QuestnShortText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TicketTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="RespnsTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CLRTypeQuestns" Relationship="CLR_DevlModel.FK__CLRTypeQu__Quest__403A8C7D" FromRole="Questn" ToRole="CLRTypeQuestn" />
+          <NavigationProperty Name="QuestnDepts" Relationship="CLR_DevlModel.FK__QuestnDep__Quest__46E78A0C" FromRole="Questn" ToRole="QuestnDept" />
+          <NavigationProperty Name="QuestnRespns" Relationship="CLR_DevlModel.FK__QuestnRes__Quest__47DBAE45" FromRole="Questn" ToRole="QuestnRespns" />
+        </EntityType>
+        <EntityType Name="QuestnDept">
+          <Key>
+            <PropertyRef Name="QuestnDeptID" />
+          </Key>
+          <Property Name="QuestnDeptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeptID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EffctvDate" Type="DateTime" />
+          <Property Name="ExpirdDate" Type="DateTime" />
+          <Property Name="QuestnID" Type="Int32" />
+          <Property Name="UdpateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Dept" Relationship="CLR_DevlModel.FK__QuestnDep__DeptI__45F365D3" FromRole="QuestnDept" ToRole="Dept" />
+          <NavigationProperty Name="Questn" Relationship="CLR_DevlModel.FK__QuestnDep__Quest__46E78A0C" FromRole="QuestnDept" ToRole="Questn" />
+        </EntityType>
+        <EntityType Name="QuestnRespn">
+          <Key>
+            <PropertyRef Name="QuestnRespnsID" />
+          </Key>
+          <Property Name="QuestnRespnsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClR_ID" Type="Int32" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="EnteredByID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="QuestnStatusCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="RespnsDateTime" Type="DateTime" />
+          <Property Name="RespnsText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="QuestnID" Type="Int32" />
+          <NavigationProperty Name="CLR" Relationship="CLR_DevlModel.FK__QuestnRes__ClR_I__48CFD27E" FromRole="QuestnRespns" ToRole="CLR" />
+          <NavigationProperty Name="Questn" Relationship="CLR_DevlModel.FK__QuestnRes__Quest__47DBAE45" FromRole="QuestnRespns" ToRole="Questn" />
+          <NavigationProperty Name="Tickets" Relationship="CLR_DevlModel.FK__Ticket__QuestnRe__4BAC3F29" FromRole="QuestnRespns" ToRole="Ticket" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="DeptID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="RoomDescr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RoomTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CLRs" Relationship="CLR_DevlModel.FK__CLR__RoomID__3F466844" FromRole="Room" ToRole="CLR" />
+          <NavigationProperty Name="Dept" Relationship="CLR_DevlModel.FK__Room__DeptID__49C3F6B7" FromRole="Room" ToRole="Dept" />
+        </EntityType>
+        <EntityType Name="SvcLine">
+          <Key>
+            <PropertyRef Name="SvcLineID" />
+          </Key>
+          <Property Name="SvcLineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SvcLineAbbrvtnName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SvcLineName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActvInactvInd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Depts" Relationship="CLR_DevlModel.FK__Dept__SvcLineID__4222D4EF" FromRole="SvcLine" ToRole="Dept" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="DeptID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EnteredByID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="IssueText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="ResltnText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="ReslvdByID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="QuestnRespnsID" Type="Int32" />
+          <Property Name="TicketDateTime" Type="DateTime" />
+          <Property Name="TicketPriorityCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TicketStatusCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TicketTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="UdpateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Dept" Relationship="CLR_DevlModel.FK__Ticket__DeptID__4AB81AF0" FromRole="Ticket" ToRole="Dept" />
+          <NavigationProperty Name="QuestnRespn" Relationship="CLR_DevlModel.FK__Ticket__QuestnRe__4BAC3F29" FromRole="Ticket" ToRole="QuestnRespns" />
+          <NavigationProperty Name="TicketActns" Relationship="CLR_DevlModel.FK__TicketAct__Ticke__4CA06362" FromRole="Ticket" ToRole="TicketActn" />
+        </EntityType>
+        <EntityType Name="TicketActn">
+          <Key>
+            <PropertyRef Name="TicketActnID" />
+          </Key>
+          <Property Name="TicketActnID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommntText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="DocmntFileName" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="EnteredByID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TicketActnDateTime" Type="DateTime" />
+          <Property Name="TicketActnStatusCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TicketActnTypeCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TicketID" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="UpdateOpertr" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Ticket" Relationship="CLR_DevlModel.FK__TicketAct__Ticke__4CA06362" FromRole="TicketActn" ToRole="Ticket" />
+        </EntityType>
+        <Association Name="FK__CLR__CLRTypeID__3E52440B">
+          <End Role="CLRType" Type="CLR_DevlModel.CLRType" Multiplicity="0..1" />
+          <End Role="CLR" Type="CLR_DevlModel.CLR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLRType">
+              <PropertyRef Name="CLRTypeID" />
+            </Principal>
+            <Dependent Role="CLR">
+              <PropertyRef Name="CLRTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLR__RoomID__3F466844">
+          <End Role="Room" Type="CLR_DevlModel.Room" Multiplicity="0..1" />
+          <End Role="CLR" Type="CLR_DevlModel.CLR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="RoomID" />
+            </Principal>
+            <Dependent Role="CLR">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnRes__ClR_I__48CFD27E">
+          <End Role="CLR" Type="CLR_DevlModel.CLR" Multiplicity="0..1" />
+          <End Role="QuestnRespns" Type="CLR_DevlModel.QuestnRespn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLR">
+              <PropertyRef Name="ClR_ID" />
+            </Principal>
+            <Dependent Role="QuestnRespns">
+              <PropertyRef Name="ClR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLRTypeQu__CLRTy__412EB0B6">
+          <End Role="CLRType" Type="CLR_DevlModel.CLRType" Multiplicity="1" />
+          <End Role="CLRTypeQuestn" Type="CLR_DevlModel.CLRTypeQuestn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLRType">
+              <PropertyRef Name="CLRTypeID" />
+            </Principal>
+            <Dependent Role="CLRTypeQuestn">
+              <PropertyRef Name="CLRTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLRTypeQu__Quest__403A8C7D">
+          <End Role="Questn" Type="CLR_DevlModel.Questn" Multiplicity="1" />
+          <End Role="CLRTypeQuestn" Type="CLR_DevlModel.CLRTypeQuestn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="CLRTypeQuestn">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dept__LocatnID__4316F928">
+          <End Role="Locatn" Type="CLR_DevlModel.Locatn" Multiplicity="0..1" />
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locatn">
+              <PropertyRef Name="LocatnID" />
+            </Principal>
+            <Dependent Role="Dept">
+              <PropertyRef Name="LocatnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dept__SvcLineID__4222D4EF">
+          <End Role="SvcLine" Type="CLR_DevlModel.SvcLine" Multiplicity="0..1" />
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SvcLine">
+              <PropertyRef Name="SvcLineID" />
+            </Principal>
+            <Dependent Role="Dept">
+              <PropertyRef Name="SvcLineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeptConta__DeptI__440B1D61">
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="0..1" />
+          <End Role="DeptContact" Type="CLR_DevlModel.DeptContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="DeptContact">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnDep__DeptI__45F365D3">
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="0..1" />
+          <End Role="QuestnDept" Type="CLR_DevlModel.QuestnDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="QuestnDept">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Room__DeptID__49C3F6B7">
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="0..1" />
+          <End Role="Room" Type="CLR_DevlModel.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ticket__DeptID__4AB81AF0">
+          <End Role="Dept" Type="CLR_DevlModel.Dept" Multiplicity="0..1" />
+          <End Role="Ticket" Type="CLR_DevlModel.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dept">
+              <PropertyRef Name="DeptID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="DeptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Locatn__EntityID__44FF419A">
+          <End Role="Entity" Type="CLR_DevlModel.Entity" Multiplicity="0..1" />
+          <End Role="Locatn" Type="CLR_DevlModel.Locatn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entity">
+              <PropertyRef Name="EntityID" />
+            </Principal>
+            <Dependent Role="Locatn">
+              <PropertyRef Name="EntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnDep__Quest__46E78A0C">
+          <End Role="Questn" Type="CLR_DevlModel.Questn" Multiplicity="0..1" />
+          <End Role="QuestnDept" Type="CLR_DevlModel.QuestnDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="QuestnDept">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QuestnRes__Quest__47DBAE45">
+          <End Role="Questn" Type="CLR_DevlModel.Questn" Multiplicity="0..1" />
+          <End Role="QuestnRespns" Type="CLR_DevlModel.QuestnRespn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questn">
+              <PropertyRef Name="QuestnID" />
+            </Principal>
+            <Dependent Role="QuestnRespns">
+              <PropertyRef Name="QuestnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ticket__QuestnRe__4BAC3F29">
+          <End Role="QuestnRespns" Type="CLR_DevlModel.QuestnRespn" Multiplicity="0..1" />
+          <End Role="Ticket" Type="CLR_DevlModel.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuestnRespns">
+              <PropertyRef Name="QuestnRespnsID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="QuestnRespnsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicketAct__Ticke__4CA06362">
+          <End Role="Ticket" Type="CLR_DevlModel.Ticket" Multiplicity="0..1" />
+          <End Role="TicketActn" Type="CLR_DevlModel.TicketActn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="TicketID" />
+            </Principal>
+            <Dependent Role="TicketActn">
+              <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CLR_DevlModelStoreContainer" CdmEntityContainer="CLREntities">
+          <EntitySetMapping Name="CLRs"><EntityTypeMapping TypeName="CLR_DevlModel.CLR"><MappingFragment StoreEntitySet="CLR">
+            <ScalarProperty Name="ClR_ID" ColumnName="ClR_ID" />
+            <ScalarProperty Name="CLRDateTime" ColumnName="CLRDateTime" />
+            <ScalarProperty Name="CLRStatusCode" ColumnName="CLRStatusCode" />
+            <ScalarProperty Name="CLRTypeID" ColumnName="CLRTypeID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="EnteredByID" ColumnName="EnteredByID" />
+            <ScalarProperty Name="MRN_EncntrDescr" ColumnName="MRN_EncntrDescr" />
+            <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CLRTypes"><EntityTypeMapping TypeName="CLR_DevlModel.CLRType"><MappingFragment StoreEntitySet="CLRType">
+            <ScalarProperty Name="CLRTypeID" ColumnName="CLRTypeID" />
+            <ScalarProperty Name="CLRTypeAbbrvtnName" ColumnName="CLRTypeAbbrvtnName" />
+            <ScalarProperty Name="CLRTypeName" ColumnName="CLRTypeName" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="DefltSortOrdr" ColumnName="DefltSortOrdr" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CLRTypeQuestns"><EntityTypeMapping TypeName="CLR_DevlModel.CLRTypeQuestn"><MappingFragment StoreEntitySet="CLRTypeQuestn">
+            <ScalarProperty Name="CLRTypeID" ColumnName="CLRTypeID" />
+            <ScalarProperty Name="QuestnID" ColumnName="QuestnID" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Depts"><EntityTypeMapping TypeName="CLR_DevlModel.Dept"><MappingFragment StoreEntitySet="Dept">
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="DeptAbbrvtnName" ColumnName="DeptAbbrvtnName" />
+            <ScalarProperty Name="LocatnID" ColumnName="LocatnID" />
+            <ScalarProperty Name="SvcLineID" ColumnName="SvcLineID" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="DefltSortOrdr" ColumnName="DefltSortOrdr" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DeptContacts"><EntityTypeMapping TypeName="CLR_DevlModel.DeptContact"><MappingFragment StoreEntitySet="DeptContact">
+            <ScalarProperty Name="DeptContactID" ColumnName="DeptContactID" />
+            <ScalarProperty Name="DeptContactTypeCode" ColumnName="DeptContactTypeCode" />
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="EmpleID" ColumnName="EmpleID" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Employees"><EntityTypeMapping TypeName="CLR_DevlModel.Employee"><MappingFragment StoreEntitySet="Employee">
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+            <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EmployeeDepts"><EntityTypeMapping TypeName="CLR_DevlModel.EmployeeDept"><MappingFragment StoreEntitySet="EmployeeDept">
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Entities"><EntityTypeMapping TypeName="CLR_DevlModel.Entity"><MappingFragment StoreEntitySet="Entity">
+            <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+            <ScalarProperty Name="EntityAbbrvtnName" ColumnName="EntityAbbrvtnName" />
+            <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+            <ScalarProperty Name="CLRContactID" ColumnName="CLRContactID" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Locatns"><EntityTypeMapping TypeName="CLR_DevlModel.Locatn"><MappingFragment StoreEntitySet="Locatn">
+            <ScalarProperty Name="LocatnID" ColumnName="LocatnID" />
+            <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+            <ScalarProperty Name="LocatnAbbrvtnName" ColumnName="LocatnAbbrvtnName" />
+            <ScalarProperty Name="LocatnName" ColumnName="LocatnName" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="DefltSortOrdr" ColumnName="DefltSortOrdr" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Questns"><EntityTypeMapping TypeName="CLR_DevlModel.Questn"><MappingFragment StoreEntitySet="Questn">
+            <ScalarProperty Name="QuestnID" ColumnName="QuestnID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="QuestnText" ColumnName="QuestnText" />
+            <ScalarProperty Name="QuestnShortText" ColumnName="QuestnShortText" />
+            <ScalarProperty Name="TicketTypeCode" ColumnName="TicketTypeCode" />
+            <ScalarProperty Name="RespnsTypeCode" ColumnName="RespnsTypeCode" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="QuestnDepts"><EntityTypeMapping TypeName="CLR_DevlModel.QuestnDept"><MappingFragment StoreEntitySet="QuestnDept">
+            <ScalarProperty Name="QuestnDeptID" ColumnName="QuestnDeptID" />
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="EffctvDate" ColumnName="EffctvDate" />
+            <ScalarProperty Name="ExpirdDate" ColumnName="ExpirdDate" />
+            <ScalarProperty Name="QuestnID" ColumnName="QuestnID" />
+            <ScalarProperty Name="UdpateDate" ColumnName="UdpateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="QuestnRespns"><EntityTypeMapping TypeName="CLR_DevlModel.QuestnRespn"><MappingFragment StoreEntitySet="QuestnRespns">
+            <ScalarProperty Name="QuestnRespnsID" ColumnName="QuestnRespnsID" />
+            <ScalarProperty Name="ClR_ID" ColumnName="ClR_ID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="EnteredByID" ColumnName="EnteredByID" />
+            <ScalarProperty Name="QuestnStatusCode" ColumnName="QuestnStatusCode" />
+            <ScalarProperty Name="RespnsDateTime" ColumnName="RespnsDateTime" />
+            <ScalarProperty Name="RespnsText" ColumnName="RespnsText" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+            <ScalarProperty Name="QuestnID" ColumnName="QuestnID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Rooms"><EntityTypeMapping TypeName="CLR_DevlModel.Room"><MappingFragment StoreEntitySet="Room">
+            <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="RoomDescr" ColumnName="RoomDescr" />
+            <ScalarProperty Name="RoomTypeCode" ColumnName="RoomTypeCode" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SvcLines"><EntityTypeMapping TypeName="CLR_DevlModel.SvcLine"><MappingFragment StoreEntitySet="SvcLine">
+            <ScalarProperty Name="SvcLineID" ColumnName="SvcLineID" />
+            <ScalarProperty Name="SvcLineAbbrvtnName" ColumnName="SvcLineAbbrvtnName" />
+            <ScalarProperty Name="SvcLineName" ColumnName="SvcLineName" />
+            <ScalarProperty Name="ActvInactvInd" ColumnName="ActvInactvInd" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tickets"><EntityTypeMapping TypeName="CLR_DevlModel.Ticket"><MappingFragment StoreEntitySet="Ticket">
+            <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+            <ScalarProperty Name="EnteredByID" ColumnName="EnteredByID" />
+            <ScalarProperty Name="IssueText" ColumnName="IssueText" />
+            <ScalarProperty Name="ResltnText" ColumnName="ResltnText" />
+            <ScalarProperty Name="ReslvdByID" ColumnName="ReslvdByID" />
+            <ScalarProperty Name="QuestnRespnsID" ColumnName="QuestnRespnsID" />
+            <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+            <ScalarProperty Name="TicketPriorityCode" ColumnName="TicketPriorityCode" />
+            <ScalarProperty Name="TicketStatusCode" ColumnName="TicketStatusCode" />
+            <ScalarProperty Name="TicketTypeCode" ColumnName="TicketTypeCode" />
+            <ScalarProperty Name="UdpateDate" ColumnName="UdpateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TicketActns"><EntityTypeMapping TypeName="CLR_DevlModel.TicketActn"><MappingFragment StoreEntitySet="TicketActn">
+            <ScalarProperty Name="TicketActnID" ColumnName="TicketActnID" />
+            <ScalarProperty Name="CommntText" ColumnName="CommntText" />
+            <ScalarProperty Name="DocmntFileName" ColumnName="DocmntFileName" />
+            <ScalarProperty Name="EnteredByID" ColumnName="EnteredByID" />
+            <ScalarProperty Name="TicketActnDateTime" ColumnName="TicketActnDateTime" />
+            <ScalarProperty Name="TicketActnStatusCode" ColumnName="TicketActnStatusCode" />
+            <ScalarProperty Name="TicketActnTypeCode" ColumnName="TicketActnTypeCode" />
+            <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdateOpertr" ColumnName="UpdateOpertr" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AtuhenticateUser" FunctionName="CLR_DevlModel.Store.sp_AuthenticateUser" />
+          <FunctionImportMapping FunctionImportName="UserAuthentication" FunctionName="CLR_DevlModel.Store.sp_AuthenticateUser" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CLRModel">
+        <EntityTypeShape EntityType="CLR_DevlModel.CLR" Width="1.5" PointX="9.75" PointY="11.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.CLRType" Width="1.5" PointX="7.5" PointY="16" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.CLRTypeQuestn" Width="1.5" PointX="13.5" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Dept" Width="1.5" PointX="5.25" PointY="6.5" Height="3.7109993489583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.DeptContact" Width="1.5" PointX="7.5" PointY="5.375" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Employee" Width="1.5" PointX="7.75" PointY="9.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.EmployeeDept" Width="1.5" PointX="0.75" PointY="11.375" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Entity" Width="1.5" PointX="0.75" PointY="7.25" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Locatn" Width="1.5" PointX="3" PointY="7" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Questn" Width="1.5" PointX="8.25" PointY="0.75" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.QuestnDept" Width="1.5" PointX="10.5" PointY="7" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.QuestnRespn" Width="1.5" PointX="12" PointY="11.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Room" Width="1.5" PointX="7.5" PointY="12" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.SvcLine" Width="1.5" PointX="3" PointY="3.25" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.Ticket" Width="1.5" PointX="14.25" PointY="8.75" Height="4.2879036458333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLR_DevlModel.TicketActn" Width="1.5" PointX="16.5" PointY="9.375" Height="3.1340950520833388" IsExpanded="true" />
+        <AssociationConnector Association="CLR_DevlModel.FK__CLR__CLRTypeID__3E52440B" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="17.470896809895834" />
+          <ConnectorPoint PointX="10.5" PointY="17.470896809895834" />
+          <ConnectorPoint PointX="10.5" PointY="15.268697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__CLR__RoomID__3F466844" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="13.470896809895834" />
+          <ConnectorPoint PointX="9.75" PointY="13.470896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__QuestnRes__ClR_I__48CFD27E" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="13.509348958333334" />
+          <ConnectorPoint PointX="12" PointY="13.509348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__CLRTypeQu__CLRTy__412EB0B6" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="16.704195904947916" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="16.704195904947916" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="16.704195904947916" />
+          <ConnectorPoint PointX="13.875" PointY="16.704195904947916" />
+          <ConnectorPoint PointX="13.875" PointY="7.922587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__CLRTypeQu__Quest__403A8C7D" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="2.4131982421875016" />
+          <ConnectorPoint PointX="14.25" PointY="2.4131982421875016" />
+          <ConnectorPoint PointX="14.25" PointY="5.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Dept__LocatnID__4316F928" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.4708968098958337" />
+          <ConnectorPoint PointX="5.25" PointY="8.4708968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Dept__SvcLineID__4222D4EF" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.4324446614583337" />
+          <ConnectorPoint PointX="6" PointY="4.4324446614583337" />
+          <ConnectorPoint PointX="6" PointY="6.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__DeptConta__DeptI__440B1D61" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="7.1199446614583328" />
+          <ConnectorPoint PointX="7.5" PointY="7.1199446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__QuestnDep__DeptI__45F365D3" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="8.5574446614583337" />
+          <ConnectorPoint PointX="10.5" PointY="8.5574446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Room__DeptID__49C3F6B7" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="10.210999348958332" />
+          <ConnectorPoint PointX="6" PointY="13.470896809895834" />
+          <ConnectorPoint PointX="7.5" PointY="13.470896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Ticket__DeptID__4AB81AF0" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.4062525" PointY="10.210999348958332" />
+          <ConnectorPoint PointX="6.4062525" PointY="11.360341796875" />
+          <ConnectorPoint PointX="12.666666666666666" PointY="11.360341796875" />
+          <ConnectorPoint PointX="12.833333333333334" PointY="11.360341796875" />
+          <ConnectorPoint PointX="13.791666666666666" PointY="11.360341796875" />
+          <ConnectorPoint PointX="13.958333333333334" PointY="11.360341796875" />
+          <ConnectorPoint PointX="14.25" PointY="11.360341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Locatn__EntityID__44FF419A" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.4324446614583337" />
+          <ConnectorPoint PointX="3" PointY="8.4324446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__QuestnDep__Quest__46E78A0C" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.53125" PointY="4.0763964843750031" />
+          <ConnectorPoint PointX="9.53125" PointY="8.1486644921875" />
+          <ConnectorPoint PointX="10.5" PointY="8.1486644921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__QuestnRes__Quest__47DBAE45" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="3.2760498632812531" />
+          <ConnectorPoint PointX="12.75" PointY="3.2760498632812531" />
+          <ConnectorPoint PointX="12.75" PointY="11.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__Ticket__QuestnRe__4BAC3F29" ManuallyRouted="false">
+          <ConnectorPoint PointX="13.5" PointY="12.393951822916669" />
+          <ConnectorPoint PointX="13.791666666666666" PointY="12.393951822916669" />
+          <ConnectorPoint PointX="13.958333333333334" PointY="12.393951822916669" />
+          <ConnectorPoint PointX="14.25" PointY="12.393951822916669" />
+        </AssociationConnector>
+        <AssociationConnector Association="CLR_DevlModel.FK__TicketAct__Ticke__4CA06362" ManuallyRouted="false">
+          <ConnectorPoint PointX="15.75" PointY="10.942047526041669" />
+          <ConnectorPoint PointX="16.5" PointY="10.942047526041669" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

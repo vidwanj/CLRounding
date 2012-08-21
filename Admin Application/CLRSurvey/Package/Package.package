@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ba15a523-5f8b-4c06-9b58-2c930e62c3e2" solutionId="ba15a523-5f8b-4c06-9b58-2c930e62c3e2" resetWebServer="false" name="CLRSurvey" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="03663945-07a9-4e40-b509-0ea18b603790" />
+    <featureReference itemId="d39925a0-115d-4729-96f7-729204b1f451" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="c26699d0-8c83-40bf-8c83-c9ab3580a149" />
+    <projectItemReference itemId="a0f090ae-94af-4ee6-8b7e-a3858a057a9f" />
+    <projectItemReference itemId="eca1e631-c0a5-400d-83e1-f4c99a2af641" />
+  </projectItems>
+</package>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="QustnRespSummaryUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="QustnRespSummary\" Type="ElementManifest" />
+    <ProjectItemFile Source="QustnRespSummary.webpart" Target="QustnRespSummary\" Type="ElementFile" />
+    <ProjectItemFile Source="QustnRespSummaryUserControl.ascx" Target="CONTROLTEMPLATES\CLRSurvey\QustnRespSummary\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CLRSurvey.QustnRespSummary" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

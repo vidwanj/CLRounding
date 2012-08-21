@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="Admin MaintainLocationUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Admin MaintainLocation\" Type="ElementManifest" />
+    <ProjectItemFile Source="Admin MaintainLocation.webpart" Target="Admin MaintainLocation\" Type="ElementFile" />
+    <ProjectItemFile Source="Admin MaintainLocationUserControl.ascx" Target="CONTROLTEMPLATES\CLRSurvey\Admin MaintainLocation\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CLRSurvey.Admin_MaintainLocation" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>
